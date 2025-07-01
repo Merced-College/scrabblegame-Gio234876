@@ -54,9 +54,15 @@ public class ScrabbleGame {
         return Collections.binarySearch(words, new Word(input)) >= 0;
     }
 
-    public static int calculateScore(String word) {
-        return word.length(); // 1 point per letter, can be adjusted
-    }
+    public static int calculateScore(String word) { 
+        if (word.length() == 3) {
+            return 1;
+        } else if (word.length() == 4) {              
+            return 2;
+        } else {
+            return 0; // No points for other lengths, adjust as needed
+        }
+    } 
 
     public static char[] exchangeLetter(char[] letters, Scanner scanner) {
         System.out.println("Your letters: " + Arrays.toString(letters));
@@ -122,7 +128,7 @@ public class ScrabbleGame {
                 }
             }
 
-            System.out.println("\nResults:");
+            System.out.println("\nResults:"); 
             for (int p = 0; p < 2; p++) {
                 System.out.println(playerNames[p] + ": " + playerWords[p] + " (" + playerScores[p] + " points)");
             }
@@ -132,7 +138,8 @@ public class ScrabbleGame {
                 System.out.println(playerNames[1] + " wins!");
             } else {
                 System.out.println("It's a tie!");
-            }
+            } 
+            
 
         } catch (IOException e) {
             System.err.println("Error loading words: " + e.getMessage());

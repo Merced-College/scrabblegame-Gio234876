@@ -26,3 +26,33 @@ TODO Turn in: Turn in your 2 files (The Word and ScrabbleGame java files) to the
 TODO: Each student must respond to the reflection question individually, providing a unique answer. This part of the assignment should not be done collaboratively. Submit your reflection as a document either on Canvas or in the GitHub repository.
 
 Reflect on your personal problem-solving process. How did your understanding of object-oriented programming (e.g., classes, constructors, and data structures like ArrayLists) evolve as you worked on this task? What challenges did you encounter and how did you go about fixing them? Explain which LLM, your prompts, or internet help and how debugged your code?
+
+
+public static int calculateScore(String word) { 
+        if (word.length() == 3) {
+            return 1;
+        } else if (word.length() == 4) {            
+            return 2;
+        } else {
+            return 0; // No points for other lengths, adjust as needed
+        }
+    } 
+
+
+
+            System.out.println("\nResults:"); 
+            for (int p = 0; p < 2; p++) {
+                System.out.println(playerNames[p] + ": " + playerWords[p] + " (" + playerScores[p] + " points)");
+            }
+            if (playerScores[0] > playerScores[1]) {
+                System.out.println(playerNames[0] + " wins!");
+            } else if (playerScores[1] > playerScores[0]) {
+                System.out.println(playerNames[1] + " wins!");
+            } else {
+                System.out.println("It's a tie!");
+            } 
+            /////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        } catch (IOException e) {
+            System.err.println("Error loading words: " + e.getMessage());
+        }
