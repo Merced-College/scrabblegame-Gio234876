@@ -51,7 +51,7 @@ public static int calculateScore(String word) {
             } else {
                 System.out.println("It's a tie!");
             } 
-            /////////////////////////////////////////////////////////////////////////////////////////////////////
+            
 
         } catch (IOException e) {
             System.err.println("Error loading words: " + e.getMessage());
