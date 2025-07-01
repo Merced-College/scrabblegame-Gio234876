@@ -112,8 +112,15 @@ public class ScrabbleGame {
                 }
                 while (true) {
                     System.out.println("Your letters: " + Arrays.toString(playerLetters));
-                    System.out.print("Enter your word using these letters: ");
+                    System.out.print("Enter your word using these letters (or '-' to skip): ");
                     String userWord = scanner.nextLine().trim().toUpperCase();
+
+                    if (userWord.equals("-") || userWord.isEmpty()) {
+                        System.out.println("Turn skipped.");
+                        playerWords[p] = "(skipped)";
+                        playerScores[p] = 0;
+                        break;
+                    }
 
                     if (!game.isValidWord(userWord, playerLetters)) {
                         System.out.println("Invalid: Your word must use only the given letters.");

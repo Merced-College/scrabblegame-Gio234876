@@ -27,7 +27,7 @@ TODO: Each student must respond to the reflection question individually, providi
 
 Reflect on your personal problem-solving process. How did your understanding of object-oriented programming (e.g., classes, constructors, and data structures like ArrayLists) evolve as you worked on this task? What challenges did you encounter and how did you go about fixing them? Explain which LLM, your prompts, or internet help and how debugged your code?
 
-
+//point system 
 public static int calculateScore(String word) { 
         if (word.length() == 3) {
             return 1;
@@ -38,7 +38,7 @@ public static int calculateScore(String word) {
         }
     } 
 
-
+            //wins or loses system 
 
             System.out.println("\nResults:"); 
             for (int p = 0; p < 2; p++) {
@@ -56,3 +56,15 @@ public static int calculateScore(String word) {
         } catch (IOException e) {
             System.err.println("Error loading words: " + e.getMessage());
         }
+
+//////Skip turn feature 
+
+      System.out.print("Enter your word using these letters (or '-' to skip): ");
+                    String userWord = scanner.nextLine().trim().toUpperCase();
+
+                    if (userWord.equals("-") || userWord.isEmpty()) {
+                        System.out.println("Turn skipped.");
+                        playerWords[p] = "(skipped)";
+                        playerScores[p] = 0;
+                        break;
+                    }
