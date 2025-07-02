@@ -27,16 +27,23 @@ TODO: Each student must respond to the reflection question individually, providi
 
 Reflect on your personal problem-solving process. How did your understanding of object-oriented programming (e.g., classes, constructors, and data structures like ArrayLists) evolve as you worked on this task? What challenges did you encounter and how did you go about fixing them? Explain which LLM, your prompts, or internet help and how debugged your code?
 
+
+Reflection
+- During this assignment, i did struggle a lot and sometimes had to rely on GitHub AI to explain or code certain sections for me, as I felt like I understood the concepts but needed some more time and extra help to execute them within programming. Classes I felt comfortable with, and had some difficulty with constructors and what I should put inside them throughout the scrabble game. For using data structure as arraylist and binary search, I'm getting more familiar with he concept, but need some help when working with creating an arraylist that can be helpful and get somewhat better at implementing a binary search as I was doing the zybooks assignment earlier throughout the day, and have seen the purpose of a binary search. I think the challenges I encountered has to be getting started as I felt like I was bulding the bridge to complete the sections before i had to get some extra help from the Github AI but also exchanging letter was a pretty big issue i faced and had some explaining do for me throughout the time of working on the scrabble project. Some prompts I ended up using "included break down how I could do an exchangeLetter()" which helped me with using some keywords as trim, convert to string, and other features included. As well, I noticed the 2019.txt file wasn't included so I thought of a few words and had some generated for me to help with being able to execute this Scrabble game as I came to many stops by not having a specific word registered.
+
+
+
+
 //point system 
-public static int calculateScore(String word) { 
-        if (word.length() == 3) {
-            return 1;
-        } else if (word.length() == 4) {            
-            return 2;
-        } else {
-            return 0; // No points for other lengths, adjust as needed
-        }
-    } 
+    public static int calculateScore(String word) { 
+            if (word.length() == 3) {
+                return 1;
+            } else if (word.length() == 4) {            
+                return 2;
+            } else {
+                return 0; // No points for other lengths, adjust as needed
+            }
+        } 
 
             //wins or loses system 
 
